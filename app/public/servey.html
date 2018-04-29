@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Friend Finder Pro</title>
 
 	<!-- Link to the jQuery Library -->
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-  	<!-- Including Font Awesome Icons -->
-  	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
+	<!-- Including Font Awesome Icons -->
+	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
 
 	<!-- Link to reset stylesheet -->
 	<link rel="stylesheet" href="css/reset.css">
 
 	<!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- Compiled and minified Materialize CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
 	<!-- Compiled and minified Materialize JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-          
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,9 +32,15 @@
 				<i class="fa fa-address-book-o fa-5x" aria-hidden="true" id=logo-icon></i>
 				<a href="/" class="brand-logo" id="logo">Friend Finder</a>
 				<ul class="right hide-on-med-and-down" id="head-nav-links">
-					<li><a href="/survey">Survey</a></li>
-					<li><a href="/api/friends">API Friends List</a></li>
-					<li><a href="">GitHub Repo</a></li>
+					<li>
+						<a href="/survey">Survey</a>
+					</li>
+					<li>
+						<a href="/api/friends">API Friends List</a>
+					</li>
+					<li>
+						<a href="">GitHub Repo</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -192,7 +199,7 @@
 							</select>
 						</div>
 
-						
+
 						<div>
 							<button class="btn waves-effect deep-purple lighten-2" type="submit" name="action" id="submitButton">Submit Responses
 								<i class="material-icons right">send</i>
@@ -214,8 +221,12 @@
 				<div class="col l4 offset-l2 s12">
 					<h5 class="white-text">Links</h5>
 					<ul>
-						<li><a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a></li>
-						<li><a class="grey-text text-lighten-3" href="">GitHub Repo</a></li>
+						<li>
+							<a class="grey-text text-lighten-3" href="/api/friends">API Friends List</a>
+						</li>
+						<li>
+							<a class="grey-text text-lighten-3" href="">GitHub Repo</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -227,5 +238,22 @@
 			</div>
 		</div>
 	</footer>
+
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Closest Friend Match</h4>
+			<div class="divider"></div>
+			<h5 id="userMatch"></h5>
+			<img id="userMatchImage" class="materialboxed" width="650" src="">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('select').material_select();
+			$('.modal').modal();
+		});
+	</script>
 </body>
+
 </html>
